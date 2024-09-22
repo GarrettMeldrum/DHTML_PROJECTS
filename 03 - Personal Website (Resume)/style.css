@@ -252,54 +252,114 @@ html, body {
 .education {
 	display: flex;
 	flex-direction: column;
-	height: 80%;
+	height: 90%;
 	width: 50%;
 }
 .education_box {
-	height: 20vh;
+	height: auto;
 	width: 100%;
-	border: .15vw solid white;
 	display: flex;
 	flex-direction: column;
 }
 .education_header_box {
-	height: 3.25vh;
+	height: auto;
 	width: 100%;
 	display: flex;
 }
+#education_title {
+	font-size: 2rem;
+	font-weight: bold;
+	border-bottom: .25vw solid white;
+}
 #education_header {
-	font-size: 3.25vh;
+	font-size: 1.66rem;
 	font-weight: bold;
 }
 #education_timeline {
 	margin-left: auto;
-	font-size: 3.25vh;
+	font-size: 1.66rem;
 	font-weight: bold;
 }
 .education_subheader_box {
-	height: 2.75vh;
+	height: auto;
 	weight: 100%;
 	display: flex;
+	flex-direction: column;
 }
 #education_subheader {
-	font-size: 2.75vh;
+	font-size: 1.33rem;
 	font-weight: bold;
 }
 .education_content_box {
 	display: flex;
-	flex-direction: column;
+	margin-top: 1.5vh;
+	margin-bottom: 1.5vh;
 }
 #education_majors {
-	font-size: 2.5vh;
+	font-size: 1.33rem;
+	font-weight: bold;
+	width: 45%;
 }
 #education_coursework {
-	font-size: 2.25vh;
+	font-size: 1rem;
+	width: 45%;
+	margin-left: auto;
 }
 
 
 .certification_box {
-	height: 18vh;
+	height: auto;
 	width: 100%;
-	border: .15vw solid white;
-	margin-top: 5vh;
+	margin-top: 2.5vh;
+	display: flex;
+	flex-direction: column;
 }
+#certification_header {
+	font-size: 2rem;
+	font-weight: bold;
+	border-bottom: .25vh solid white;
+}
+.certification_list {
+	font-size: 1.66rem;
+	
+}
+
+
+#experience_box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+#experience_box_title {
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+.experience {
+	display: flex;
+	flex-direction: column;
+	border: .15vw solid white;
+}
+.experience_header {
+	display: flex;
+	height: 4vh;
+	border-bottom: .15vw solid white;
+}
+.experience_title {
+	font-size: 2rem;
+	font-weight: bold;
+	height: auto;
+	width: 50%;
+	border-right: .15vw solid green;
+	
+}
+.experience_timeframe {
+	font-size: 2rem;
+	font-weight: bold;
+	height: auto;
+	width: 50%;
+	border: .15vw solid red;
+}
+.experience_content {}
+.experience_position {}
+.experience_list {}
