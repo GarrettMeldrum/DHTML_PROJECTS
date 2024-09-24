@@ -1,12 +1,49 @@
-@layer base;
+@layer base, rhythm;
 
 @layer base {
   :root {
 	overflow: hidden;
     --color-background: #000;
     --color-text: #fff0f4;
+	
+	
   }
 }
+
+@rhythm {
+	--font-size-min: 16;
+	--font-size-max: 20;
+	
+	--line-height-min: 1.2;
+	--line-height-max: 1.6;
+	
+	--font-size-default: var(--font-size);
+	--line-height-defaulty: var(--line-height);
+	
+	--spacing: var(--RHYTHM);
+	
+	/* 
+      Useful heading scales
+      Golden Ratio: 1.618
+      Minor Sixth: 1.6
+      Perfect Fifth: 1.5
+      Augmented Fourth: 1.414
+      Perfect Fourth: 1.333
+      Major Third: 1.25
+      Minor Third: 1.2
+      Major Second: 1.125
+      Minor Second: 1.067
+
+      Once CSS pow() is supported, we can use the following formula to create a scale:
+      --min-font-size: pow(var(--base-font-size-min) * var(--min-heading-scale)), var(--heading-level));
+      --max-font-size: pow(var(--base-font-size-max) * var(--max-heading-scale)), var(--heading-level));
+    */
+	
+	--pl: 1.125;
+	--pu: 1.6;
+	
+}
+
 
 html, body {
   height: 100%;
@@ -73,8 +110,23 @@ html, body {
   
   border-bottom: .25vw solid white;
   
+  scroll-snap-type: y mandatory;
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
+}
+
+.long_box {
+	display: flex;
+	height: 200%;
+	width: 100%;
+	border-bottom: .25vh solid yellow;
+	
+	justify-content: center;
+	align-items: center;
+	
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
 }
 
 .about {
@@ -146,7 +198,7 @@ html, body {
   style: block;
 }
 #mouse-scroll {
-  position: fixed;
+  position: absolute;
   margin: 0;
   left: 50%;
   bottom: 20px;
@@ -301,7 +353,7 @@ html, body {
 	width: 45%;
 }
 #education_coursework {
-	font-size: 1rem;
+	font-size: 1.15rem;
 	width: 45%;
 	margin-left: auto;
 }
@@ -324,42 +376,11 @@ html, body {
 	
 }
 
-
-#experience_box {
+#experience_screen {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 }
-#experience_box_title {
-	font-size: 2.25rem;
-	font-weight: bold;
+#experience_screen_title {
 }
-.experience {
-	display: flex;
-	flex-direction: column;
-	border: .15vw solid white;
-}
-.experience_header {
-	display: flex;
-	height: 4vh;
-	border-bottom: .15vw solid white;
-}
-.experience_title {
-	font-size: 2rem;
-	font-weight: bold;
-	height: auto;
-	width: 50%;
-	border-right: .15vw solid green;
-	
-}
-.experience_timeframe {
-	font-size: 2rem;
-	font-weight: bold;
-	height: auto;
-	width: 50%;
-	border: .15vw solid red;
-}
-.experience_content {}
-.experience_position {}
-.experience_list {}
