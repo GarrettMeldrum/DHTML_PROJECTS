@@ -1,18 +1,15 @@
-@layer base;
 
-@layer base {
-  :root {
-	overflow: hidden;
-    --color-background: #000;
-    --color-text: #fff0f4;
-  }
-}
 
 html, body {
+  --color-background: #000;
+  --color-text: #fff0f4;
+  
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  
+  
   background-color: var(--color-background, white);
   color: var(--color-text, black);
   overflow: hidden;
@@ -21,14 +18,15 @@ html, body {
 
 
 .menu {
+  position: fixed;
   display: flex;
-  height: 7.5vh;
+  height: auto;
   width: 100vw;
   border-bottom: .25vh solid white;
   background-color: var(--color-background, white);
 }
 .menu span {
-	font-size: 5vh;
+	font-size: 2.5vw;
 	align-self: flex-end;
 }
 .menu-tabs {
@@ -37,8 +35,9 @@ html, body {
 .menu-tabs button {
 	display: inline-flex;
 	align-items: flex-end;
-	font-size: 2.5vh;
+	font-size: 1.33vw;
 	height: 100%;
+	width: auto;
 	background-color: var(--color-background, white);
 	color: var(--color-text, black);
 	border: none;
@@ -50,61 +49,7 @@ html, body {
 }
 
 .container {
-  height: 92.5vh;
+  border: .25vw solid yellow;
+  height: 100vh;
   width: 100vw;
-  scroll-snap-type: y mandatory;
-  overflow: auto;
 }
-.container::-webkit-scrollbar {
-	display: none;
-}
-.container {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-.box {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  
-  justify-content: center;
-  align-items: center;
-  
-  border-bottom: .25vw solid white;
-  
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-}
-
-.about {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-}
-.about_box_1 {
-	display: flex;
-	border: .15vw solid white;
-	height: 50%;
-	width: 50%;
-}
-.about_box_1 img {
-	height: 100%;
-	object-fit: cover;
-}
-.about_box_1_content {
-	display: flex;
-	flex-direction: column;
-	margin-left: 1vw;
-}
-#about_me_header {
-	font-size: 6vh;
-	font-weight: bold;
-}
-#about_me_body {
-	font-size: 3vh;
-}
-
