@@ -20,8 +20,8 @@ html, body {
 .menu {
   position: fixed;
   display: flex;
-  height: auto;
   width: 100vw;
+  min-height: 2.5vw;
   border-bottom: .25vh solid white;
   background-color: var(--color-background, white);
 }
@@ -31,6 +31,7 @@ html, body {
 }
 .menu-tabs {
 	margin-left: auto;
+  margin-right: 1vw;
 }
 .menu-tabs button {
 	display: inline-flex;
@@ -46,10 +47,4 @@ html, body {
 	background-color: white;
 	color: black;
 	cursor: pointer;
-}
-
-.container {
-  border: .25vw solid yellow;
-  height: 100vh;
-  width: 100vw;
 }
