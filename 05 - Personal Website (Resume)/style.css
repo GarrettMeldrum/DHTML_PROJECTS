@@ -1,44 +1,45 @@
-@layer base;
-
-@layer base {
-  :root {
-	overflow: hidden;
-    --color-background: #000;
-    --color-text: #fff0f4;
-  }
-}
-
 html, body {
+  --color-background: #000;
+  --color-background-body: #ffffff;
+  --color-text: #ffffff;
+  --color-text-body: #000; 
+  
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--color-background, white);
-  color: var(--color-text, black);
+  
+  
+  background-color: var(--color-background-body, black);
+  color: var(--color-text-body, white);
   overflow: hidden;
 }
 
 
 
 .menu {
+  position: fixed;
   display: flex;
-  height: 7.5vh;
   width: 100vw;
+  min-height: 2.5vw;
   border-bottom: .25vh solid white;
   background-color: var(--color-background, white);
 }
 .menu span {
-	font-size: 5vh;
+	font-size: 2.5vw;
 	align-self: flex-end;
+	color: var(--color-text, black);
 }
 .menu-tabs {
 	margin-left: auto;
+	margin-right: 1vw;
 }
 .menu-tabs button {
 	display: inline-flex;
 	align-items: flex-end;
-	font-size: 2.5vh;
+	font-size: 1.33vw;
 	height: 100%;
+	width: auto;
 	background-color: var(--color-background, white);
 	color: var(--color-text, black);
 	border: none;
@@ -49,11 +50,15 @@ html, body {
 	cursor: pointer;
 }
 
+
 .container {
-  height: 92.5vh;
+  height: 100vh;
   width: 100vw;
-  scroll-snap-type: y mandatory;
   overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
 }
 .container::-webkit-scrollbar {
 	display: none;
@@ -63,84 +68,142 @@ html, body {
 	scrollbar-width: none;
 }
 
+
 .box {
   display: flex;
   height: 100%;
   width: 100%;
   
+  margin: 0;
+  padding: 0;
+  
+  margin-top: 5vw;
+  
   justify-content: center;
   align-items: center;
   
-  border-bottom: .25vw solid white;
+  border-bottom: .25vw solid black;
   
+	
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
 }
 
-.about {
+
+#about {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
-	width: 100%;
+	height: calc(100% - .25vw);
+	width: calc(100% - 40vw);
+	
 	justify-content: center;
 	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 .about_box_1 {
 	display: flex;
-	height: 50%;
-	width: 50%;
+	height: 18vw;
+
+
 }
 .about_box_1 img {
-	height: 100%;
+	height: calc(100% - .25vw);
 	object-fit: cover;
-	border: .15vw solid white;
+	border: .25vw solid black;
 }
 .about_box_1_content {
 	display: flex;
 	flex-direction: column;
-	margin-left: 1vw;
+	margin-left: 1.5vw;
+	height: 100%;
 }
 #about_me_header {
-	font-size: 6vh;
+	font-size: 2.66vw;
 	font-weight: bold;
 }
 #about_me_body {
-	font-size: 3vh;
+	font-size: 1vw;
 }
-
-.about_box_2 {
-	display: flex;
-	height: 5%;
-	width: 50%;
-	margin-top: 2.5vh;
+.about_me_buttons {
+	margin-right: auto;
+	margin-top: auto;
 }
-.about_box_2 button {
+.about_me_buttons button {
 	flex: 1 1 5vw;
 	display: inline-flex;
 	border: none;
-	margin-right: 1.5vw;
-	font-size: 1.75vw;
+	margin-right: .66vw;
+	font-size: 1vw;
 	text-align: center;
+	margin-top: 1.5vw;
 }
-.about_box_2 button:last-child {
+.about_me_buttons button:last-child {
 	margin-right: 0vw;
 }
-.about_box_2 button:hover {
+.about_me_buttons button:hover {
 	cursor: pointer;
 }
 
+.skills_container {
+	display: flex;
+	height: 16vw;
+	width: 100%;
+	
+	margin-top: 1.66vw;
+}
 .skills {
+	flex: 1 1 0;
+	height: 100%;
+	
+	
+	
 	display: flex;
 	flex-direction: column;
-	height: 100%;
-	width: 100%;
 }
-.skills_row_1 {
+.skills_title {
+	text-align: middle;
+	align-self: center;
+	border-bottom: .15vw solid black;
+	font-size: 1.5vw;
+	font-weight: bold;
+	
+	margin-bottom: .5vw;
+}
+.skill {
 	display: flex;
-	height: 100%;
-	width: calc(50% - .15vw);
-	border: .15vw solid green;
+	height: 2.33vw;
+	width: 85%;
+	border: .15vw solid black;
+	text-align: middle;
+	align-items: center;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: .33vw;
 }
+.skill:last-child {
+	margin-bottom: 0vw;
+}
+.skill img {
+	height: 100%;
+	object-fit: cover;
+}
+.skill_content {
+	display: flex;
+	flex-direction: column;
+}
+.skill_header {
+	font-size: 1.25vw;
+	font-weight: bold;
+	margin-left: 1vw;
+}
+.skill_timeline {
+	font-size: 1vw;
+	margin-left: 1vw;
+}
+
 
 #mouse-scroll {
   style: block;
@@ -155,14 +218,14 @@ html, body {
 }
 #mouse-scroll span{
   display: block;
-  width: 5px; 
-  height: 5px;
+  width: 2.5px; 
+  height: 2.5px;
   -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
        transform: rotate(45deg);
        transform: rotate(45deg);
-  border-right: 2px solid #fff; 
-  border-bottom: 2px solid #fff;
+  border-right: 2px solid #000; 
+  border-bottom: 2px solid #000;
   margin: 0 0 3px 5px;
 }
 #mouse-scroll .mouse {
@@ -172,7 +235,7 @@ html, body {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  border: 2px solid #ffffff;
+  border: 2px solid #000;
   top: 170px;
 }
 #mouse-scroll .down-arrow-1 {
@@ -202,7 +265,7 @@ html, body {
   width: 2px;
   display: block; 
   margin: 5px auto;
-  background: #ffffff;
+  background: #000;
   position: relative;
 }
 #mouse-scroll .mouse-in {
