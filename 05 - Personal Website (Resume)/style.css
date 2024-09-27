@@ -312,80 +312,125 @@ html, body {
 
 
 
+#knowledge {
+	display: flex;
+	flex-direction: column;
+	
+	height: calc(100% - .25vw);
+	width: calc(100% - 15vw);
+	
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	
+
+}
 .education {
 	display: flex;
-	flex-direction: column;
-	height: 90%;
-	width: 50%;
-}
-.education_box {
-	height: auto;
+	height: 12.5vw;
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-}
-.education_header_box {
-	height: auto;
-	width: 100%;
-	display: flex;
+
 }
 #education_title {
-	font-size: 2rem;
+	width: 40%;
+
+	
+	font-size: 2vw;
 	font-weight: bold;
-	border-bottom: .25vw solid white;
+}
+.education_content {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	
+}
+#education_subheader {
+	font-size: 1.66vw;
+	font-weight: bold;
+}
+#education_box_1 {
+	display: flex;
+	margin-top: .75vw;
 }
 #education_header {
-	font-size: 1.66rem;
+	font-size: 1.5vw;
 	font-weight: bold;
 }
 #education_timeline {
-	margin-left: auto;
-	font-size: 1.66rem;
-	font-weight: bold;
-}
-.education_subheader_box {
-	height: auto;
-	weight: 100%;
-	display: flex;
-	flex-direction: column;
-}
-#education_subheader {
-	font-size: 1.33rem;
-	font-weight: bold;
-}
-.education_content_box {
-	display: flex;
-	margin-top: 1.5vh;
-	margin-bottom: 1.5vh;
-}
-#education_majors {
-	font-size: 1.33rem;
-	font-weight: bold;
-	width: 45%;
-}
-#education_coursework {
-	font-size: 1.15rem;
-	width: 45%;
+	font-size: 1.5vw;
 	margin-left: auto;
 }
+#education_study {
+	font-size: 1.33vw;
+	margin-top: .50vw;
+}
+#education_body {
+	font-size: 1.33vw;
+}
 
-
-.certification_box {
-	height: auto;
+.certification {
+	display: flex;
+	height: 20vw;
 	width: 100%;
-	margin-top: 2.5vh;
+}
+#certification_title {
+	width: 40%;
+	height: 100%;
+	
+	font-size: 2vw;
+	font-weight: bold;
+}
+#certification_content {
+	width: 60%;
+	height: 100%;
+}
+#certification_content ul {
+	margin: 0;	
+}
+#certification_content li {
+	margin: 0;
+}
+.certificate {
 	display: flex;
 	flex-direction: column;
+	
+	height: 3vw;
+	width: auto;
+	
+	margin-bottom: .75vw;
 }
-#certification_header {
-	font-size: 2rem;
+.certificate:last-child {
+	margin-bottom: 0;
+}
+.certificate_header {
+	display: flex;
+}
+.certificate_name {
+	text-align: bottom;
+
+	font-size: 1.33vw;
 	font-weight: bold;
-	border-bottom: .25vh solid white;
 }
-.certification_list {
-	font-size: 1.66rem;
+.certificate_timeframe {
+	margin-left: auto;
+	text-align: bottom;
+	
+	font-size: 1.33vw;
+
+}
+.certificate_institute {
+	font-weight: italic;
+	font-size: 1.25vw;
 	
 }
+
+
+
+
+
+
+
 
 
 #experience_box {
